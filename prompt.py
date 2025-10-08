@@ -1,5 +1,5 @@
-num = input("Enter integers separated by space: ").split()
-result=[int(n) if int(n)<=100 else "over" for n in num]
-print(result)
-
-
+list1 = list(map(int, input("Enter first list: ").split(',')))
+list2 = list(map(int, input("Enter second list: ").split(',')))
+print("Same length" if len(list1) == len(list2) else "Different length")
+print("Sums are equal" if sum(list1) == sum(list2) else "Sums are different")
+print("Common values found" if set(list1) & set(list2) else "No common values")
