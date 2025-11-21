@@ -1,0 +1,30 @@
+class Rectangle:
+    def __init__(self, length=0, width=0):
+        self.__length = length      # private attribute
+        self.__width = width        # private attribute
+
+    def area(self):
+        return self.__length * self.__width
+
+    # Overload < operator
+    def __lt__(self, other):
+        return self.area() < other.area()
+
+
+# Taking input from the user
+l1 = float(input("Enter length of first rectangle: "))
+w1 = float(input("Enter width of first rectangle: "))
+
+l2 = float(input("\nEnter length of second rectangle: "))
+w2 = float(input("Enter width of second rectangle: "))
+
+# Creating rectangle objects
+r1 = Rectangle(l1, w1)
+r2 = Rectangle(l2, w2)
+
+# Comparing areas
+if r1 < r2:
+    print("\nRectangle 1 has a smaller area than Rectangle 2")
+else:
+    print("\nRectangle 1 does not have a smaller area than Rectangle 2")
+
